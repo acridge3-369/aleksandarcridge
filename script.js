@@ -1,4 +1,16 @@
-// Navigation link handling - now integrated with smooth scrolling below
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
 
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
@@ -161,17 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Scroll detection for optimization
-let userIsScrolling = false;
-
-window.addEventListener('wheel', (e) => {
-    if (!userIsScrolling) {
-        userIsScrolling = true;
-        setTimeout(() => {
-            userIsScrolling = false;
-        }, 100);
-    }
-}, { passive: true });
 
 // Performance optimization: Throttle scroll events
 function throttle(func, limit) {
@@ -194,128 +195,4 @@ const throttledScroll = throttle(() => {
 
 window.addEventListener('scroll', throttledScroll);
 
-// Smooth automatic section scrolling
-let isAutoScrolling = false;
-let scrollTimeout;
-let animationFrameId = null;
-const sections = Array.from(document.querySelectorAll('section[id]'));
-
-// Detect user scrolling and trigger auto-snap after they stop
-let userScrollTimeout;
-let isUserScrolling = false;
-
-function onScroll() {
-    isUserScrolling = true;
-    clearTimeout(userScrollTimeout);
-    
-    // Wait for user to stop scrolling
-    userScrollTimeout = setTimeout(() => {
-        isUserScrolling = false;
-        if (!isAutoScrolling) {
-            snapToNearestSection();
-        }
-    }, 150); // Increased delay for smoother feel
-}
-
-// Throttle scroll events for performance
-let scrollThrottleTimeout;
-window.addEventListener('scroll', () => {
-    if (!scrollThrottleTimeout) {
-        scrollThrottleTimeout = setTimeout(() => {
-            onScroll();
-            scrollThrottleTimeout = null;
-        }, 50);
-    }
-}, { passive: true });
-
-// Mouse wheel support
-window.addEventListener('wheel', () => {
-    onScroll();
-}, { passive: true });
-
-// Touch support for mobile
-window.addEventListener('touchmove', () => {
-    onScroll();
-}, { passive: true });
-
-function snapToNearestSection() {
-    if (isAutoScrolling) return;
-    
-    const viewportCenter = window.pageYOffset + (window.innerHeight / 2);
-    let nearestSection = null;
-    let minDistance = Infinity;
-    
-    // Find the section closest to viewport center
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionCenter = sectionTop + (sectionHeight / 2);
-        const distance = Math.abs(viewportCenter - sectionCenter);
-        
-        if (distance < minDistance) {
-            minDistance = distance;
-            nearestSection = section;
-        }
-    });
-    
-    if (nearestSection) {
-        const currentScroll = window.pageYOffset;
-        const targetScroll = nearestSection.offsetTop;
-        const scrollDistance = Math.abs(currentScroll - targetScroll);
-        
-        // Only auto-scroll if we're not already at the section
-        if (scrollDistance > 50) {
-            smoothScrollTo(targetScroll);
-        }
-    }
-}
-
-function smoothScrollTo(targetPosition) {
-    if (isAutoScrolling) return;
-    
-    isAutoScrolling = true;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    const duration = 1200; // Longer duration for smoother feel
-    let startTime = null;
-    
-    function animate(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        // Smooth ease-out cubic easing
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        
-        const newPosition = startPosition + (distance * easeOutCubic);
-        window.scrollTo(0, newPosition);
-        
-        if (progress < 1 && !isUserScrolling) {
-            animationFrameId = requestAnimationFrame(animate);
-        } else {
-            isAutoScrolling = false;
-            animationFrameId = null;
-        }
-    }
-    
-    // Cancel any existing animation
-    if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId);
-    }
-    
-    animationFrameId = requestAnimationFrame(animate);
-}
-
-// Enhanced navigation clicks with smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        isUserScrolling = false;
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            smoothScrollTo(target.offsetTop);
-        }
-    });
-});
-
-console.log('Portfolio loaded with ultra-smooth scrolling! 🚀');
+console.log('Portfolio loaded! 🚀');
