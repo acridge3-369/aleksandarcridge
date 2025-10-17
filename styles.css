@@ -19,6 +19,9 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100%;
 }
 
 body {
@@ -29,6 +32,7 @@ body {
     font-weight: 300;
     letter-spacing: -0.01em;
     overflow-x: hidden;
+    height: 100%;
 }
 
 /* Navigation */
@@ -110,10 +114,13 @@ body {
 /* Section 1: About Me */
 .about-section {
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     padding: 8rem 3rem 4rem;
     position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .about-content {
@@ -259,6 +266,8 @@ body {
     min-height: 100vh;
     padding: 8rem 3rem;
     background: var(--bg-secondary);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .projects-container {
@@ -369,10 +378,13 @@ body {
 /* Section 3: Contact */
 .contact-section {
     min-height: 100vh;
+    height: 100vh;
     padding: 8rem 3rem;
     background: var(--bg-primary);
     display: flex;
     align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .contact-container {
@@ -486,6 +498,8 @@ body {
 
     .about-section {
         padding: 7rem 2rem 4rem;
+        height: auto;
+        min-height: 100vh;
     }
 
     .about-content {
@@ -505,9 +519,15 @@ body {
         transform: translateY(0);
     }
 
-    .projects-section,
+    .projects-section {
+        padding: 6rem 2rem;
+        height: auto;
+    }
+    
     .contact-section {
         padding: 6rem 2rem;
+        height: auto;
+        min-height: 100vh;
     }
 
     .project-item {
@@ -522,6 +542,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-snap-type: y proximity;
+    }
+
     .nav-container {
         padding: 1rem 1.5rem;
     }
@@ -536,6 +560,8 @@ body {
 
     .about-section {
         padding: 6rem 1.5rem 3rem;
+        height: auto;
+        min-height: 100vh;
     }
 
     .about-content {
@@ -554,9 +580,15 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .projects-section,
+    .projects-section {
+        padding: 5rem 1.5rem;
+        height: auto;
+    }
+    
     .contact-section {
         padding: 5rem 1.5rem;
+        height: auto;
+        min-height: 100vh;
     }
 
     .section-heading {
@@ -584,6 +616,10 @@ body {
 
 /* Performance Optimizations */
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-snap-type: none !important;
+    }
+    
     *,
     *::before,
     *::after {

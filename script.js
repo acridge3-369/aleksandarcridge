@@ -1,12 +1,14 @@
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links with snap support
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
+            // Use smooth scroll with snap alignment
             target.scrollIntoView({
                 behavior: 'smooth',
-                block: 'start'
+                block: 'start',
+                inline: 'nearest'
             });
         }
     });
