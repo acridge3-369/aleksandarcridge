@@ -1,70 +1,59 @@
-# Portfolio Website
+# Aleksandar Cridge - Portfolio
 
-A stunning, scroll-driven portfolio website with smooth animations and a minimalist design.
+Professional portfolio website for Aleksandar Cridge, 4th year Electrical Engineering student at UBC.
 
 ## Features
 
-- 🎨 Modern, minimalist design with clean layout
-- 📜 Impressive scroll-driven animations
-- ✨ Smooth fade-in and slide-in effects
-- 📱 Fully responsive across all devices
-- 🎯 Three focused sections: About, Projects, Contact
-- 🚀 Optimized performance with Intersection Observer API
-- 💫 Staggered animations for visual appeal
+- 🎨 Warm beige professional design
+- 📱 Fully responsive layout
+- 👔 Job-focused presentation
+- 📧 Direct contact information
+- 🎓 Education and experience showcase
+- 💼 Project portfolio
 
-## Getting Started
+## Sections
 
-Simply open `index.html` in your web browser to view the portfolio.
+1. **Home** - Profile picture, bio, skills, and education
+2. **Experience** - Work history and internships
+3. **Projects** - Technical projects and achievements
+4. **Contact** - Direct contact methods
+
+## Design
+
+The portfolio features a warm, professional beige color scheme designed specifically for engineering career opportunities. The layout emphasizes:
+
+- Clear presentation of qualifications
+- Easy-to-read project descriptions
+- Professional appearance suitable for recruiters
+- Mobile-friendly design
+
+## Contact Information
+
+- **Email:** acridge3@gmail.com
+- **Phone:** (604) 831-9533
+- **GitHub:** @acridge3-369
+- **LinkedIn:** /in/aleksandar-cridge
 
 ## Customization
 
-### Update Personal Information
+To update your information:
 
-1. Open `index.html`
-2. Replace "Your Name" with your actual name
-3. Update the hero subtitle with your title/role
-4. Modify the about section with your bio
+1. **Personal Info:** Edit the hero section in `index.html`
+2. **Experience:** Update the timeline items in the experience section
+3. **Projects:** Modify project cards with your actual projects
+4. **Colors:** Adjust CSS variables in `styles.css` (lines 10-19)
+5. **Profile Picture:** Replace the `.image-placeholder` with an actual `<img>` tag
 
-### Add Your Projects
+## Deployment
 
-In the projects section, update each project card with:
-- Project title
-- Description
-- Technologies used (tags)
-- You can add project images by replacing the placeholder div
+This portfolio is ready to deploy on:
+- GitHub Pages
+- Netlify
+- Vercel
+- Any static hosting service
 
-### Update Contact Links
-
-Replace the example links in the contact section with your actual:
-- Email address
-- GitHub profile
-- LinkedIn profile
-- Twitter/X handle
-
-### Customize Colors
-
-Edit the CSS variables in `styles.css` (lines 10-17) to change the color scheme:
-
-```css
-:root {
-    --bg-primary: #fafafa;      /* Main background */
-    --bg-secondary: #ffffff;    /* Card backgrounds */
-    --text-primary: #1a1a1a;    /* Main text color */
-    --text-secondary: #666666;  /* Secondary text */
-    --accent: #2c2c2c;          /* Accent color */
-    --border: #e5e5e5;          /* Border color */
-}
-```
-
-## Browser Support
-
-Works on all modern browsers:
-- Chrome
-- Firefox
-- Safari
-- Edge
+Simply upload the files or connect your repository to the hosting platform.
 
 ## License
 
-Free to use for personal and commercial projects.
-
+Free to use and modify for personal use.

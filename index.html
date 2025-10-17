@@ -3,193 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Aleksandar Cridge</title>
+    <title>Aleksandar Cridge | Electrical Engineering</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#about" class="nav-logo">Aleksandar Cridge</a>
+            <a href="#home" class="nav-logo">AC</a>
             <ul class="nav-menu">
-                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Section 1: About Me -->
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <div class="about-left scroll-reveal">
-                <h1 class="main-title">
-                    <span class="title-line">Hello,</span>
-                    <span class="title-line">I'm <span class="highlight">Aleksandar Cridge</span></span>
-                </h1>
-                <p class="subtitle">Electrical Engineering Student @ UBC</p>
-            </div>
-            <div class="about-right scroll-reveal">
-                <div class="about-text-wrapper">
-                    <h2 class="section-heading">About Me</h2>
-                    <p class="about-description">
-                        I'm an Electrical Engineering student at the University of British Columbia,
-                        passionate about technology and innovation. With a strong foundation in both
-                        hardware and software, I enjoy bringing ideas to life through engineering.
-                    </p>
-                    <p class="about-description">
-                        My interests span across circuit design, embedded systems, software development,
-                        and emerging technologies. I'm always eager to learn and take on new challenges
-                        that push the boundaries of what's possible.
-                    </p>
-                    <div class="skills-list">
-                        <div class="skill-item scroll-item">Electrical Engineering</div>
-                        <div class="skill-item scroll-item">Software Development</div>
-                        <div class="skill-item scroll-item">Circuit Design</div>
-                        <div class="skill-item scroll-item">Problem Solving</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="profile-image">
+                        <div class="image-placeholder">AC</div>
+                    </div>
+                    <h1 class="name">Aleksandar Cridge</h1>
+                    <p class="title">Electrical Engineering Student</p>
+                    <p class="location">University of British Columbia</p>
+                    <div class="contact-links">
+                        <a href="mailto:acridge3@gmail.com" class="icon-link" title="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                        <a href="tel:+16048319533" class="icon-link" title="Phone">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/acridge3-369" target="_blank" class="icon-link" title="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/aleksandar-cridge" target="_blank" class="icon-link" title="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
-
-    <!-- Section 2: Projects & Experience -->
-    <section id="projects" class="projects-section">
-        <div class="projects-container">
-            <div class="section-header scroll-reveal">
-                <h2 class="section-heading">Projects & Experience</h2>
-                <p class="section-subheading">A selection of my recent work</p>
-            </div>
-
-            <div class="projects-wrapper">
-                <div class="project-item scroll-reveal" data-project="1">
-                    <div class="project-number">01</div>
-                    <div class="project-details">
-                        <h3 class="project-name">E-Commerce Platform</h3>
-                        <p class="project-desc">
-                            Full-stack web application with secure payment integration,
-                            real-time inventory management, and responsive design.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Stripe API</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item scroll-reveal" data-project="2">
-                    <div class="project-number">02</div>
-                    <div class="project-details">
-                        <h3 class="project-name">Data Visualization Dashboard</h3>
-                        <p class="project-desc">
-                            Interactive analytics platform with real-time charts,
-                            custom filters, and export functionality.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">D3.js</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item scroll-reveal" data-project="3">
-                    <div class="project-number">03</div>
-                    <div class="project-details">
-                        <h3 class="project-name">Task Management App</h3>
-                        <p class="project-desc">
-                            Collaborative project management tool with drag-and-drop
-                            interface, team chat, and progress tracking.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">WebSockets</span>
-                            <span class="tech-tag">PWA</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item scroll-reveal" data-project="4">
-                    <div class="project-number">04</div>
-                    <div class="project-details">
-                        <h3 class="project-name">AI Content Generator</h3>
-                        <p class="project-desc">
-                            Machine learning powered application for automated content
-                            creation with natural language processing.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-item scroll-reveal" data-project="5">
-                    <div class="project-number">05</div>
-                    <div class="project-details">
-                        <h3 class="project-name">Mobile Fitness Tracker</h3>
-                        <p class="project-desc">
-                            Cross-platform mobile app with workout tracking, nutrition
-                            logging, and social sharing features.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Redux</span>
-                            <span class="tech-tag">GraphQL</span>
-                            <span class="tech-tag">AWS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 3: Contact -->
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <div class="contact-content scroll-reveal">
-                <h2 class="section-heading">Let's Connect</h2>
-                <p class="contact-intro">
-                    I'm always interested in new opportunities, collaborations, and projects.
-                    Feel free to reach out if you'd like to connect!
-                </p>
                 
-                <div class="contact-methods">
-                    <a href="mailto:acridge3@gmail.com" class="contact-method scroll-item">
-                        <span class="method-label">Email</span>
-                        <span class="method-value">acridge3@gmail.com</span>
-                    </a>
-                    <a href="tel:+16048319533" class="contact-method scroll-item">
-                        <span class="method-label">Phone</span>
-                        <span class="method-value">(604) 831-9533</span>
-                    </a>
-                    <a href="https://github.com/acridge3-369" target="_blank" class="contact-method scroll-item">
-                        <span class="method-label">GitHub</span>
-                        <span class="method-value">@acridge3-369</span>
-                    </a>
-                    <a href="https://linkedin.com/in/aleksandar-cridge" target="_blank" class="contact-method scroll-item">
-                        <span class="method-label">LinkedIn</span>
-                        <span class="method-value">/aleksandar-cridge</span>
-                    </a>
+                <div class="hero-right">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="description">
+                        I'm a fourth-year Electrical Engineering student at the University of British Columbia 
+                        with a passion for technology and innovation. My expertise spans circuit design, 
+                        embedded systems, and software development.
+                    </p>
+                    <p class="description">
+                        I thrive on solving complex engineering problems and am constantly seeking opportunities 
+                        to apply my technical skills to real-world challenges. I'm actively looking for full-time 
+                        positions where I can contribute to meaningful projects and continue growing as an engineer.
+                    </p>
+                    <div class="skills">
+                        <span class="skill-badge">Circuit Design</span>
+                        <span class="skill-badge">Embedded Systems</span>
+                        <span class="skill-badge">PCB Design</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">C/C++</span>
+                        <span class="skill-badge">MATLAB</span>
+                        <span class="skill-badge">Verilog</span>
+                        <span class="skill-badge">Signal Processing</span>
+                    </div>
                 </div>
             </div>
 
-            <footer class="footer">
-                <p>&copy; 2025 Aleksandar Cridge. Crafted with passion.</p>
-            </footer>
+            <!-- Education Section -->
+            <div class="education-section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-card">
+                    <div class="education-header">
+                        <div>
+                            <h3 class="education-degree">Bachelor of Applied Science in Electrical Engineering</h3>
+                            <p class="education-school">University of British Columbia</p>
+                        </div>
+                        <div class="education-date">Expected 2026</div>
+                    </div>
+                    <p class="education-description">
+                        Focused on power systems, control systems, and embedded electronics. 
+                        Relevant coursework includes Digital Systems Design, Microcontrollers, 
+                        Circuit Analysis, and Communication Systems.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="experience-title">Engineering Intern</h3>
+                        <p class="experience-company">Company Name</p>
+                        <p class="experience-date">Summer 2024</p>
+                        <ul class="experience-list">
+                            <li>Designed and tested circuit boards for power distribution systems</li>
+                            <li>Collaborated with team to optimize system performance</li>
+                            <li>Conducted signal analysis and troubleshooting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="experience-title">Research Assistant</h3>
+                        <p class="experience-company">UBC Department of Electrical Engineering</p>
+                        <p class="experience-date">2023 - 2024</p>
+                        <ul class="experience-list">
+                            <li>Assisted in research on renewable energy systems</li>
+                            <li>Developed data acquisition systems using Python</li>
+                            <li>Analyzed experimental data and prepared technical reports</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="experience-title">Technical Projects Lead</h3>
+                        <p class="experience-company">UBC Engineering Design Team</p>
+                        <p class="experience-date">2022 - Present</p>
+                        <ul class="experience-list">
+                            <li>Led team of 8 students in developing autonomous systems</li>
+                            <li>Managed project timelines and technical documentation</li>
+                            <li>Designed PCBs and implemented embedded control systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="project-title">Smart Home Automation System</h3>
+                    <p class="project-description">
+                        Designed and implemented an IoT-based home automation system using ESP32 
+                        microcontrollers. Features include remote control via mobile app, voice commands, 
+                        and energy monitoring.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">ESP32</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">IoT</span>
+                        <span class="tag">PCB Design</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Digital Signal Processing Filter</h3>
+                    <p class="project-description">
+                        Developed a real-time audio filter using MATLAB and implemented on FPGA. 
+                        Includes low-pass, high-pass, and band-pass filtering with adjustable parameters.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">MATLAB</span>
+                        <span class="tag">Verilog</span>
+                        <span class="tag">FPGA</span>
+                        <span class="tag">DSP</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Battery Management System</h3>
+                    <p class="project-description">
+                        Created a BMS for lithium-ion battery packs with cell balancing, temperature 
+                        monitoring, and state-of-charge estimation using Kalman filtering.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Embedded C</span>
+                        <span class="tag">STM32</span>
+                        <span class="tag">Power Electronics</span>
+                        <span class="tag">PCB</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Robotic Arm Controller</h3>
+                    <p class="project-description">
+                        Built a 6-DOF robotic arm with inverse kinematics control. Implemented using 
+                        Arduino and servo motors with custom PCB shield.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Robotics</span>
+                        <span class="tag">Control Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-text">
+                I'm currently seeking full-time opportunities in electrical engineering. 
+                Feel free to reach out if you'd like to discuss potential roles or collaborations.
+            </p>
+            <div class="contact-info">
+                <a href="mailto:acridge3@gmail.com" class="contact-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>acridge3@gmail.com</span>
+                </a>
+                <a href="tel:+16048319533" class="contact-card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>(604) 831-9533</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Aleksandar Cridge. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
