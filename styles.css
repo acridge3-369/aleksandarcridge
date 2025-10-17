@@ -18,9 +18,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scroll-padding-top: 0;
+    scroll-behavior: auto;
     overflow-y: scroll;
     height: 100%;
 }
@@ -34,7 +32,6 @@ body {
     letter-spacing: -0.01em;
     overflow-x: hidden;
     height: 100%;
-    scroll-snap-type: y mandatory;
 }
 
 /* Navigation */
@@ -121,8 +118,6 @@ body {
     align-items: center;
     padding: 8rem 3rem 4rem;
     position: relative;
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
 }
 
 .about-content {
@@ -268,8 +263,6 @@ body {
     min-height: 100vh;
     padding: 8rem 3rem;
     background: var(--bg-secondary);
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
 }
 
 .projects-container {
@@ -385,8 +378,6 @@ body {
     background: var(--bg-primary);
     display: flex;
     align-items: center;
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
 }
 
 .contact-container {
@@ -544,10 +535,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    html {
-        scroll-snap-type: y proximity;
-    }
-
     .nav-container {
         padding: 1rem 1.5rem;
     }
@@ -618,10 +605,6 @@ body {
 
 /* Performance Optimizations */
 @media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-snap-type: none !important;
-    }
-    
     *,
     *::before,
     *::after {
