@@ -31,13 +31,13 @@ window.addEventListener('scroll', () => {
 });
 
 // Active navigation link based on scroll position
-const sections = document.querySelectorAll('section[id]');
+const allSections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
 function updateActiveLink() {
     const scrollPos = window.pageYOffset + 200;
     
-    sections.forEach(section => {
+    allSections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
@@ -175,14 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Add smooth easing to scroll
-let isScrolling = false;
+// Scroll detection for optimization
+let userIsScrolling = false;
 
 window.addEventListener('wheel', (e) => {
-    if (!isScrolling) {
-        isScrolling = true;
+    if (!userIsScrolling) {
+        userIsScrolling = true;
         setTimeout(() => {
-            isScrolling = false;
+            userIsScrolling = false;
         }, 100);
     }
 }, { passive: true });
@@ -208,4 +208,103 @@ const throttledScroll = throttle(() => {
 
 window.addEventListener('scroll', throttledScroll);
 
-console.log('Portfolio loaded with scroll animations! 🚀');
+// Smooth automatic section scrolling
+let isScrolling = false;
+let scrollTimeout;
+let currentSection = 0;
+const sections = Array.from(document.querySelectorAll('section[id]'));
+
+// Detect scroll direction and automatically snap to next/prev section
+let lastScrollTop = 0;
+let scrollDirection = 'down';
+
+window.addEventListener('scroll', () => {
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    scrollDirection = st > lastScrollTop ? 'down' : 'up';
+    lastScrollTop = st <= 0 ? 0 : st;
+}, false);
+
+// Add wheel event for smoother automatic transitions
+let wheelTimeout;
+window.addEventListener('wheel', (e) => {
+    if (isScrolling) return;
+    
+    clearTimeout(wheelTimeout);
+    wheelTimeout = setTimeout(() => {
+        autoScrollToNearestSection();
+    }, 50);
+}, { passive: true });
+
+// Add touch support for mobile
+let touchStartY = 0;
+let touchEndY = 0;
+
+window.addEventListener('touchstart', (e) => {
+    touchStartY = e.changedTouches[0].screenY;
+}, { passive: true });
+
+window.addEventListener('touchend', (e) => {
+    if (isScrolling) return;
+    
+    touchEndY = e.changedTouches[0].screenY;
+    clearTimeout(wheelTimeout);
+    wheelTimeout = setTimeout(() => {
+        autoScrollToNearestSection();
+    }, 50);
+}, { passive: true });
+
+function autoScrollToNearestSection() {
+    if (isScrolling) return;
+    
+    const scrollPosition = window.pageYOffset + window.innerHeight / 3;
+    let nearestSection = sections[0];
+    let minDistance = Math.abs(sections[0].offsetTop - scrollPosition);
+    
+    sections.forEach(section => {
+        const distance = Math.abs(section.offsetTop - scrollPosition);
+        if (distance < minDistance) {
+            minDistance = distance;
+            nearestSection = section;
+        }
+    });
+    
+    // Only auto-scroll if we're not already very close to a section boundary
+    const currentScroll = window.pageYOffset;
+    const targetScroll = nearestSection.offsetTop;
+    
+    if (Math.abs(currentScroll - targetScroll) > 100) {
+        isScrolling = true;
+        smoothScrollTo(nearestSection.offsetTop, 800);
+        
+        setTimeout(() => {
+            isScrolling = false;
+        }, 900);
+    }
+}
+
+function smoothScrollTo(targetPosition, duration) {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+    
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        // Easing function for smooth deceleration
+        const easeInOutCubic = progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+        
+        window.scrollTo(0, startPosition + distance * easeInOutCubic);
+        
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+    }
+    
+    requestAnimationFrame(animation);
+}
+
+console.log('Portfolio loaded with smooth auto-scroll! 🚀');

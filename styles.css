@@ -20,6 +20,7 @@
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    scroll-padding-top: 0;
     overflow-y: scroll;
     height: 100%;
 }
@@ -33,6 +34,7 @@ body {
     letter-spacing: -0.01em;
     overflow-x: hidden;
     height: 100%;
+    scroll-snap-type: y mandatory;
 }
 
 /* Navigation */
@@ -120,7 +122,7 @@ body {
     padding: 8rem 3rem 4rem;
     position: relative;
     scroll-snap-align: start;
-    scroll-snap-stop: always;
+    scroll-snap-stop: normal;
 }
 
 .about-content {
@@ -267,7 +269,7 @@ body {
     padding: 8rem 3rem;
     background: var(--bg-secondary);
     scroll-snap-align: start;
-    scroll-snap-stop: always;
+    scroll-snap-stop: normal;
 }
 
 .projects-container {
@@ -384,7 +386,7 @@ body {
     display: flex;
     align-items: center;
     scroll-snap-align: start;
-    scroll-snap-stop: always;
+    scroll-snap-stop: normal;
 }
 
 .contact-container {
