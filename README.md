@@ -1,14 +1,16 @@
 # Portfolio Website
 
-A clean, minimalist portfolio website with a light background and sleek typography.
+A stunning, scroll-driven portfolio website with smooth animations and a minimalist design.
 
 ## Features
 
-- 🎨 Modern, minimalist design
-- 📱 Fully responsive layout
-- ✨ Smooth animations and transitions
-- 🚀 Fast and lightweight
-- 🎯 Easy to customize
+- 🎨 Modern, minimalist design with clean layout
+- 📜 Impressive scroll-driven animations
+- ✨ Smooth fade-in and slide-in effects
+- 📱 Fully responsive across all devices
+- 🎯 Three focused sections: About, Projects, Contact
+- 🚀 Optimized performance with Intersection Observer API
+- 💫 Staggered animations for visual appeal
 
 ## Getting Started
 

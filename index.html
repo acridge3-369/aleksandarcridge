@@ -9,142 +9,143 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">Portfolio</a>
+            <a href="#about" class="nav-logo">Your Name</a>
             <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Hello, I'm <span class="highlight">Your Name</span></h1>
-            <p class="hero-subtitle">Creative Developer & Designer</p>
-            <a href="#projects" class="cta-button">View My Work</a>
+    <!-- Section 1: About Me -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-left scroll-reveal">
+                <h1 class="main-title">
+                    <span class="title-line">Hello,</span>
+                    <span class="title-line">I'm <span class="highlight">Your Name</span></span>
+                </h1>
+                <p class="subtitle">Creative Developer & Designer</p>
+            </div>
+            <div class="about-right scroll-reveal">
+                <div class="about-text-wrapper">
+                    <h2 class="section-heading">About Me</h2>
+                    <p class="about-description">
+                        I'm a passionate developer who crafts beautiful digital experiences.
+                        With expertise in modern web technologies and a keen eye for design,
+                        I transform ideas into elegant, functional solutions.
+                    </p>
+                    <p class="about-description">
+                        My work focuses on creating intuitive interfaces that not only look
+                        stunning but also deliver exceptional user experiences. I believe in
+                        clean code, thoughtful design, and continuous innovation.
+                    </p>
+                    <div class="skills-list">
+                        <div class="skill-item scroll-item">Web Development</div>
+                        <div class="skill-item scroll-item">UI/UX Design</div>
+                        <div class="skill-item scroll-item">React & Node.js</div>
+                        <div class="skill-item scroll-item">Responsive Design</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                I'm a passionate developer who loves creating beautiful and functional digital experiences.
-                With a keen eye for design and a commitment to clean code, I bring ideas to life through
-                innovative solutions.
-            </p>
-        </div>
-    </section>
+    <!-- Section 2: Projects & Experience -->
+    <section id="projects" class="projects-section">
+        <div class="projects-container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-heading">Projects & Experience</h2>
+                <p class="section-subheading">A selection of my recent work</p>
+            </div>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-image">01</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project One</h3>
-                        <p class="project-description">
-                            A modern web application built with cutting-edge technologies.
-                            Features responsive design and seamless user experience.
+            <div class="projects-wrapper">
+                <div class="project-item scroll-reveal" data-project="1">
+                    <div class="project-number">01</div>
+                    <div class="project-details">
+                        <h3 class="project-name">E-Commerce Platform</h3>
+                        <p class="project-desc">
+                            Full-stack web application with secure payment integration,
+                            real-time inventory management, and responsive design.
                         </p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">CSS3</span>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe API</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-image">02</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Two</h3>
-                        <p class="project-description">
-                            An elegant solution for complex data visualization with
-                            interactive charts and real-time updates.
+                <div class="project-item scroll-reveal" data-project="2">
+                    <div class="project-number">02</div>
+                    <div class="project-details">
+                        <h3 class="project-name">Data Visualization Dashboard</h3>
+                        <p class="project-desc">
+                            Interactive analytics platform with real-time charts,
+                            custom filters, and export functionality.
                         </p>
-                        <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">D3.js</span>
-                            <span class="tag">API</span>
+                        <div class="project-tech">
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">REST API</span>
+                            <span class="tech-tag">PostgreSQL</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-image">03</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Three</h3>
-                        <p class="project-description">
-                            Mobile-first design with a focus on accessibility and
-                            performance optimization for all devices.
+                <div class="project-item scroll-reveal" data-project="3">
+                    <div class="project-number">03</div>
+                    <div class="project-details">
+                        <h3 class="project-name">Task Management App</h3>
+                        <p class="project-desc">
+                            Collaborative project management tool with drag-and-drop
+                            interface, team chat, and progress tracking.
                         </p>
-                        <div class="project-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">UI/UX</span>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">WebSockets</span>
+                            <span class="tech-tag">PWA</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-image">04</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Four</h3>
-                        <p class="project-description">
-                            E-commerce platform with secure payment integration and
-                            inventory management system.
+                <div class="project-item scroll-reveal" data-project="4">
+                    <div class="project-number">04</div>
+                    <div class="project-details">
+                        <h3 class="project-name">AI Content Generator</h3>
+                        <p class="project-desc">
+                            Machine learning powered application for automated content
+                            creation with natural language processing.
                         </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Django</span>
-                            <span class="tag">PostgreSQL</span>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Docker</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-image">05</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Five</h3>
-                        <p class="project-description">
-                            AI-powered application leveraging machine learning
-                            for predictive analytics and automation.
+                <div class="project-item scroll-reveal" data-project="5">
+                    <div class="project-number">05</div>
+                    <div class="project-details">
+                        <h3 class="project-name">Mobile Fitness Tracker</h3>
+                        <p class="project-desc">
+                            Cross-platform mobile app with workout tracking, nutrition
+                            logging, and social sharing features.
                         </p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">ML</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-image">06</div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Six</h3>
-                        <p class="project-description">
-                            Cross-platform mobile app with native performance and
-                            beautiful, intuitive interface.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">Mobile</span>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">AWS</span>
                         </div>
                     </div>
                 </div>
@@ -152,24 +153,41 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-text">
-                I'm always open to discussing new projects, creative ideas, or opportunities.
-            </p>
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-link">Email</a>
-                <a href="https://github.com/yourusername" target="_blank" class="contact-link">GitHub</a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">LinkedIn</a>
-                <a href="https://twitter.com/yourusername" target="_blank" class="contact-link">Twitter</a>
+    <!-- Section 3: Contact -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-content scroll-reveal">
+                <h2 class="section-heading">Let's Work Together</h2>
+                <p class="contact-intro">
+                    I'm currently available for freelance work and full-time opportunities.
+                    Let's create something amazing together.
+                </p>
+                
+                <div class="contact-methods">
+                    <a href="mailto:your.email@example.com" class="contact-method scroll-item">
+                        <span class="method-label">Email</span>
+                        <span class="method-value">your.email@example.com</span>
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" class="contact-method scroll-item">
+                        <span class="method-label">GitHub</span>
+                        <span class="method-value">@yourusername</span>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-method scroll-item">
+                        <span class="method-label">LinkedIn</span>
+                        <span class="method-value">/in/yourusername</span>
+                    </a>
+                    <a href="https://twitter.com/yourusername" target="_blank" class="contact-method scroll-item">
+                        <span class="method-label">Twitter</span>
+                        <span class="method-value">@yourusername</span>
+                    </a>
+                </div>
             </div>
+
+            <footer class="footer">
+                <p>&copy; 2025 Your Name. Crafted with passion.</p>
+            </footer>
         </div>
     </section>
-
-    <footer class="footer">
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
