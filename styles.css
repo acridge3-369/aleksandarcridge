@@ -6,11 +6,11 @@
 }
 
 :root {
-    --bg-primary: #f5f1eb;
-    --text-primary: #1a365d;
-    --text-secondary: #4a5568;
-    --accent: #d69e2e;
-    --highlight: #f6e05e;
+    --bg-primary: #ffffff;
+    --text-primary: #2d3748;
+    --text-secondary: #718096;
+    --accent: #3182ce;
+    --highlight: #bee3f8;
     --border: #e2e8f0;
 }
 
@@ -64,11 +64,11 @@ body {
     width: 250px;
     height: 300px;
     border-radius: 12px;
-    background: linear-gradient(135deg, var(--accent) 0%, #b7791f 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, #2c5aa0 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(49, 130, 206, 0.2);
     position: relative;
     overflow: hidden;
 }
@@ -116,13 +116,13 @@ body {
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(214, 158, 46, 0.3);
+    box-shadow: 0 4px 15px rgba(49, 130, 206, 0.3);
 }
 
 .resume-button:hover {
-    background-color: #b7791f;
+    background-color: #2c5aa0;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(214, 158, 46, 0.4);
+    box-shadow: 0 6px 20px rgba(49, 130, 206, 0.4);
 }
 
 /* Contact Footer */
