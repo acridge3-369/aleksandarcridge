@@ -171,14 +171,14 @@ body {
 
 /* Projects Section */
 .projects-section {
-    padding: 5rem 0;
+    padding: 7rem 0;
     background-color: #f8fafc;
 }
 
 .projects-container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 0 6rem;
 }
 
 .projects-title {
@@ -580,7 +580,7 @@ body {
     }
 
     .projects-container {
-        padding: 0 3rem;
+        padding: 0 4rem;
     }
 }
 
@@ -624,7 +624,7 @@ body {
     }
 
     .projects-container {
-        padding: 0 2rem;
+        padding: 0 3rem;
     }
 
     .projects-grid {
