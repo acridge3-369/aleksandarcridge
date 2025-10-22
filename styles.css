@@ -192,7 +192,7 @@ body {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 1.5rem;
     max-width: 100%;
 }
 
@@ -221,6 +221,13 @@ body {
     font-size: 1.2rem;
     font-weight: 600;
     position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .project-overlay {
@@ -576,7 +583,7 @@ body {
 @media (max-width: 1200px) {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .projects-container {
@@ -629,7 +636,7 @@ body {
 
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .modal-content {
