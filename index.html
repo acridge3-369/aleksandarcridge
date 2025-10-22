@@ -90,11 +90,11 @@
 
                     <div class="project-card" onclick="openModal('project2')">
                         <div class="project-image">
-                            <div class="image-placeholder">Alarm Clock</div>
+                            <div class="image-placeholder">PPG Circuit</div>
                         </div>
                         <div class="project-overlay">
-                            <h3>Motion Activated Alarm Clock</h3>
-                            <p>Touchless control using ultrasound sensors</p>
+                            <h3>Pulse Detection Circuit</h3>
+                            <p>PPG sensor heartbeat detection with LED feedback</p>
                         </div>
                     </div>
 
@@ -241,14 +241,15 @@
 
                                 <div class="resume-item">
                                     <div class="resume-item-header">
-                                        <h3>Motion Activated Digital Alarm Clock</h3>
-                                        <span class="date">October 2024</span>
+                                        <h3>Pulse Detection Circuit for PPG Sensor</h3>
+                                        <span class="date">April 2025</span>
                                     </div>
-                                    <p class="resume-item-tech">Tools: ARM Tiva LaunchPad, Energia, C++</p>
+                                    <p class="resume-item-tech">Tools: LTspice, BJT Transistors, Oscilloscope</p>
                                     <ul class="resume-list">
-                                        <li>Designed a digital alarm clock with touchless control using ultrasound sensors for precise motion detection</li>
-                                        <li>Programmed the ARM Cortex M4-based Tiva LaunchPad development board in Energia</li>
-                                        <li>Implemented automatic brightness adjustment using a light sensor based on ambient lighting</li>
+                                        <li>Designed and implemented a discrete-component circuit to detect heartbeats from a PPG sensor signal</li>
+                                        <li>Built and tested the monostable multivibrator using BJTs (Q1, Q2, Q3) with edge detection circuit</li>
+                                        <li>Conducted LTspice simulations to validate timing behavior (~167 ms Ton) and verified with oscilloscope</li>
+                                        <li>Responds reliably up to 180 BPM and operates from a 5V DC supply with LED feedback</li>
                                     </ul>
                                 </div>
 
@@ -337,25 +338,31 @@
     <div id="project2" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('project2')">&times;</span>
-            <h2>Motion Activated Digital Alarm Clock</h2>
-            <p class="project-date">October 2024</p>
+            <h2>Pulse Detection Circuit for PPG Sensor</h2>
+            <p class="project-date">April 2025 | ENGR 305: Microelectronics</p>
             
             <h3>Overview</h3>
-            <p>Designed a digital alarm clock with touchless control using ultrasound sensors for precise motion detection.</p>
+            <p>Designed and implemented a discrete-component circuit to detect heartbeats from a PPG (Photoplethysmography) sensor signal. The circuit generates a fixed-width output pulse for each heartbeat and drives an LED indicator, simulating pulse feedback.</p>
             
             <h3>Technical Details</h3>
             <ul>
-                <li>Programmed the ARM Cortex M4-based Tiva LaunchPad development board in Energia</li>
-                <li>Implemented automatic brightness adjustment using a light sensor based on ambient lighting</li>
-                <li>Created intuitive touchless interface for alarm setting and time display</li>
+                <li>Built and tested the monostable multivibrator using BJTs (Q1, Q2, Q3)</li>
+                <li>Designed the edge detection circuit using a differentiator and diode isolation</li>
+                <li>Conducted LTspice simulations to validate timing behavior (~167 ms Ton)</li>
+                <li>Chose standard resistor and capacitor values based on hand calculations</li>
+                <li>Diagnosed circuit issues with lab technician and adjusted components to minimize oscillations</li>
+                <li>Verified functionality using oscilloscope waveform captures and pulse timing analysis</li>
+                <li>Responds reliably up to 180 BPM and operates from a 5V DC supply</li>
             </ul>
             
             <h3>Technologies</h3>
             <div class="modal-tags">
-                <span>ARM Tiva LaunchPad</span>
-                <span>Energia</span>
-                <span>C++</span>
-                <span>Ultrasound Sensors</span>
+                <span>LTspice</span>
+                <span>BJT Transistors</span>
+                <span>PPG Sensor</span>
+                <span>Oscilloscope</span>
+                <span>Circuit Design</span>
+                <span>Microelectronics</span>
             </div>
         </div>
     </div>
